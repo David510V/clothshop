@@ -1,8 +1,8 @@
 # clothshop
 
-## Project setup
+## Project Desc
 ```
-npm install
+My Vue project for an online shopping site.
 ```
 
 ### Compiles and hot-reloads for development
