@@ -12,6 +12,11 @@
        </router-link>
      </div>
 
+
+    <div v-if="errorShow">
+      <p class="alert alert-danger" style="text-align:center">{{errorShow}}</p>
+    </div>
+
      <div class="container" id="cont">
       <div class="row">
         <div class="col-12">
@@ -47,7 +52,7 @@
 <script>
 import firebase from 'firebase'
 import axios from '../../axios-auth';
-import { mapState, mapActions } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 
 export default {
@@ -55,9 +60,17 @@ export default {
       return {
         email: '',
         name:'',
-        password: ''
+        password: '',
+        
       }
   },
+  
+   computed: {
+        ...mapGetters("storeAuth",["errorShow"]),
+        message(){
+          return this.$store.getters.errorShow
+        }
+      },
   
   methods: {
     ...mapActions("storeAuth", ["register","storeUser"]),
@@ -69,19 +82,13 @@ export default {
         }
         console.log(userData)
         this.$store.dispatch('register', {email:userData.email, name:userData.name, password:userData.password})
-      }
+      },
+
+      
   },
-
-
-
-
-    // methods:{
-    //     navigateToMen(){
-    //        this.$router.push({path:'/men'})
-    //     }
-    // },
-  
 }
+
+
 </script>
 
 <style scoped>

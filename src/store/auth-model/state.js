@@ -1,6 +1,7 @@
 const state={
     idToken: null,
     userId: null,
-    user: null
+    user: null,
+    message:null
 }
 export default state

@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './registerServiceWorker'
+
 import router from './router'
 import store from './store'
 import axios from 'axios'
 import auth from './store/store-auth.js'
+require('dotenv').config()
+
 
 import { firestorePlugin } from 'vuefire'
 Vue.use(firestorePlugin)
@@ -12,7 +14,7 @@ Vue.use(firestorePlugin)
 Vue.config.productionTip = false
 
 
-axios.defaults.baseURL = 'https://colthme.firebaseio.com"'
+axios.defaults.baseURL = process.env.FireBase_DatabaseURL
 // axios.defaults.headers.common['Authorization'] = 'fasfdsa'
 axios.defaults.headers.get['Accepts'] = 'application/json'
 

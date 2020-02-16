@@ -1,15 +1,15 @@
 import firebase from 'firebase'
 import 'firebase/firestore'
-
+require('dotenv').config
 var firebaseConfig = {
-  apiKey: "AIzaSyB11f1PgXg8rfxqMC4Nm9Htxuc1hocZqpc",
-  authDomain: "colthme.firebaseapp.com",
-  databaseURL: "https://colthme.firebaseio.com",
+  apiKey: process.env.API,
+  authDomain: process.env.FireBase_AuthDomain,
+  databaseURL: process.env.FireBase_DatabaseURL,
   projectId: "colthme",
-  storageBucket: "colthme.appspot.com",
-  messagingSenderId: "658112373058",
-  appId: "1:658112373058:web:c3e6c73fb8da7b67c428db",
-  measurementId: "G-K5Q1RS3N16"
+  storageBucket: process.env.FireBase_StorageBucket,
+  messagingSenderId: process.env.FireBase_MessagingSenderID,
+  appId: process.env.FireBase_AppID,
+  measurementId: process.env.FireBase_MeasurementId
   };
   // Initialize Firebase
   const firebaseapp=firebase.initializeApp(firebaseConfig);

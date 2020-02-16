@@ -46,7 +46,8 @@ export default {
       },
       user(){
         return this.$store.getters.user
-      }
+      },
+     
     },
 
     methods: {

@@ -17,15 +17,15 @@
 <script>
 import header from './views/Header.vue'
 import home from './views/Home.vue';
-
+import { mapGetters,mapActions } from "vuex";
     export default {
-     
+     ...mapActions("storeAuth", ["AutoLogin"]),
         components:{
             appheader:header,
             apphome:home
         },
-        methods:{
-      
+        created() {
+          this.$store.dispatch('AutoLogin')
         },
         
     }

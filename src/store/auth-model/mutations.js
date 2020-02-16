@@ -8,8 +8,13 @@ const mutations={
       state.idToken=null,
       state.userId=null
     },
-      storeUser (state, userData) {
-        state.user = userData.email
-      }
+
+    storeUser (state, userData) {
+      state.user = userData.email
+    },
+
+    errorMessage(state,ero){
+      state.message=ero
+    }
 }
 export default mutations
