@@ -5,6 +5,23 @@
     width: 220px;
     margin-bottom: 0.1rem
   }
+
+  .carousel {
+    height:450px;
+  }
+
+  .carousel-caption{
+    width:200px;
+    z-index:10;
+    color:rgb(241, 195, 195);
+    text-align:center;
+    top:50%;
+    left:20%;
+    bottom:auto;
+    -webkit-transform:translate(0, -50%);
+    -ms-transform:translate(0, -50%);
+    transform:translate(0, -50%);
+  }
   
   .hovereffect {
     width: 100%;
