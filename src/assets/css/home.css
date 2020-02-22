@@ -6,21 +6,25 @@
     margin-bottom: 0.1rem
   }
 
-  .carousel {
-    height:450px;
+ 
+  @media (min-width: 300px) and (max-width:640px) {
+    .carousel{
+      height: 110px;
+    }
+    .carousel-caption p{
+      font-size: 10px;
+    }
+    .carousel-caption h3{
+      font-size: 20px;
+    }
+   }
+  .carousel-caption{
+    font-size: 35px;
+    color:rgb(247, 214, 214);
   }
 
-  .carousel-caption{
-    width:200px;
-    z-index:10;
-    color:rgb(241, 195, 195);
-    text-align:center;
-    top:50%;
-    left:20%;
-    bottom:auto;
-    -webkit-transform:translate(0, -50%);
-    -ms-transform:translate(0, -50%);
-    transform:translate(0, -50%);
+  .first{
+    color: rgb(250, 249, 249);
   }
   
   .hovereffect {

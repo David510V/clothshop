@@ -11,18 +11,23 @@
                 </transition>
 
             
+
+    <br><fot></fot>
+
     </div>
 </template>
 
 <script>
 import header from './views/Header.vue'
 import home from './views/Home.vue';
+import footer from './views/Footer.vue';
 import { mapGetters,mapActions } from "vuex";
     export default {
      ...mapActions("storeAuth", ["AutoLogin"]),
         components:{
             appheader:header,
-            apphome:home
+            apphome:home,
+            fot:footer
         },
         created() {
           this.$store.dispatch('AutoLogin')

@@ -86,7 +86,7 @@ export default {
       items:items,
       catg:'shoes',
       gender:'women',
-      options:['S','M','L','XL']
+      options:['39','40','41','42','43','44']
     }
   },
 

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="menBack">
      <br><div class="container">
      <div class="row sibling-fade">
         <div class="col-sm-4">
@@ -9,7 +9,7 @@
             <div class="card-body">
                 <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menPants" exact>
-                 <button type="button" id="btn" class="btn btn-light btn-lg">Pants</button>
+                 <button id="btn" class="btn ">Pants</button>
                   </router-link>
                   </h4>
             </div>
@@ -24,7 +24,7 @@
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menShirts" exact>
-                 <button type="button" id="btn" class="btn btn-light btn-lg">Shirts</button>
+                 <button  id="btn" class="btn ">Shirts</button>
                   </router-link>
             </h4>
             </div>
@@ -38,7 +38,7 @@
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menSweaters" exact>
-                 <button type="button" id="btn" class="btn btn-light btn-lg">Sweaters</button>
+                 <button  id="btn" class="btn ">Sweaters</button>
                   </router-link>
             </h4>
             </div>
@@ -53,7 +53,7 @@
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menShoes" exact>
-                 <button type="button" id="btn" class="btn btn-light btn-lg">Shoes</button>
+                 <button  id="btn" class="btn ">Shoes</button>
                   </router-link>
             </h4>
             </div>
@@ -68,7 +68,7 @@
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menSports"  exact>
-                 <button type="button" id="btn" class="btn btn-light btn-lg">Sports</button>
+                 <button  id="btn" class="btn ">Sports</button>
                   </router-link>
             </h4>
             </div>
@@ -82,7 +82,7 @@
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menAccessories" exact>
-                 <button type="button" id="btn" class="btn btn-light btn-lg">Accessories</button>
+                 <button  id="btn" class="btn ">Accessories</button>
                   </router-link>
             </h4>
             </div>
@@ -95,7 +95,7 @@
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/:id"  exact>
-                 <button type="button" id="btn" class="btn btn-light btn-lg">Something</button>
+                 <button  id="btn" class="btn ">Something</button>
                   </router-link>
             </h4>
             </div>

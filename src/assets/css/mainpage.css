@@ -1,16 +1,24 @@
-#btn{
-    font-size: 2.6rem;
-   font-weight: normal;
-   line-height: 1.2;
-   font-family: 'Oswald', sans-serif;
-}
+
+   #btn{
+    font-size: 35px;
+   }
+   .btn{
+    background: #C6A8A2;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  .btn:hover{
+    opacity: 2;
+    color: black;
+  }
 .sibling-fade {
  display: flex;
  flex-wrap: wrap;
 }
 
 .sibling-fade > * {
- background: white;
+ 
  flex: auto;
  text-align: center;
  color: #f05555;

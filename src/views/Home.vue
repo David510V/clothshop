@@ -6,7 +6,7 @@
       <hr class="hr">
       <h5>The Simplest Place For You</h5>
      </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+           <div id="carouselExampleIndicators" class="carousel slide d-none d-lg-block d-xl-block" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -14,25 +14,25 @@
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img class="d-block w-100"  src="../../public/img/cor1copy.jpg" alt="First slide">
-                 <div class="carousel-caption d-none d-md-block">
-                        <h3>Look at Our New Collection</h3>
-                        <h6>Fashion and the Pure</h6>
-                      </div>
+                  <img class="d-block w-100" src="../../public/img/cor1.jpg" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block first">
+                    <h1><strong>Artist way</strong></h1>
+                    <p>Show, Don't tell</p>
+                  </div>
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100"  src="../../public/img/cor2copy.jpg" alt="Second slide">
-                   <div class="carousel-caption d-none d-md-block">
-                      <h3>Wises and The Strongest</h3>
-                      <h6>Simple for you to choose </h6>
-                      </div>
+                  <img class="d-block w-100" src="../../public/img/cor2copy.jpg" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1><strong>Our New Collection</strong></h1>
+                    <p>We are trying to make something splendid</p>
+                  </div>
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100"  src="../../public/img/cor3copy.jpg" alt="Third slide">
+                  <img class="d-block w-100" src="../../public/img/cor3copy.jpg" alt="Third slide">
                    <div class="carousel-caption d-none d-md-block">
-                        <h3>New 2019 Accessories </h3>
-                        <h6>Buy some stuff that look nice</h6>
-                      </div>
+                    <h1><strong>Enjoy the new series</strong></h1>
+                    <p>First time ever, in TLV, Come and see</p>
+                  </div>
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -88,25 +88,30 @@
         <p class="lead">We are here you to make the simplest choice in the most complicated world which is fashion.</p>
         <hr class="my-4">
           <p>For more info about who we are and what we do...</p>
-        <p class="lead">
-          <a class="btn btn-lg" href="#" role="button">About Me</a>
-        </p>
+          <router-link class="home" active-class="active"  to="/register" exact>
+                <a class="btn btn-lg" href="#" role="button">Look For More</a>
+         </router-link>
       </div>
+   
   
-  <br><br><br><br>
+
   </div>
 </template>
 
 <script>
+
 export default {
   data () {
   return {
     publicPath: '/dist'
   }
+  },
+  
 }
-}
+
 </script>
 
 <style lang="scss">
 @import '../../src/assets/css/home.css';
+
 </style>
