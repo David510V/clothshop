@@ -2,15 +2,11 @@
    <div>
        
       <div style="text-align:center">
-       <router-link class="home" active-class="active"  to="/" exact>
-                <h3 >ClothMe</h3>
-                  </router-link>
+                <h3 class="home" >ClothMe</h3>
       <hr class="hr">
       <h8>The Simplest Place For You</h8>
       <br><br>
-       <router-link class="home" active-class="active"  to="/cart" exact>
-      <h1 class="men">CART </h1><img class="supericon" height="34px" src="../../public/img/shopping-cart.png">
-       </router-link>
+      <h1 class="home men">CART </h1><img class="supericon" height="34px" src="../../public/img/shopping-cart.png">
      </div>
 
      <div class="container">
@@ -27,14 +23,6 @@
                         </tr>
                     </thead>
                     <tbody> 
-                        <tr>
-                        <th scope="row">M</th>
-                        <td>WILLY Dilly</td>
-                        <td>89 ILS</td>
-                        <td><img height="120px" class="img-fluid rounded" width="170px" src="../../public/img/women/shirts/shirt3.jpg" alt="Responsive image"></td>
-                        <td><i @click="removeItem(index)" class="far fa-trash-alt iconbtn"></i></td>
-                        </tr>
-
                         <tr v-for="item in items">
                         <th scope="row">{{item.size}}</th>
                         <td>{{item.title}}</td>

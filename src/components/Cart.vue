@@ -26,14 +26,6 @@
                         </tr>
                     </thead>
                     <tbody> 
-                        <tr>
-                        <th scope="row">M</th>
-                        <td>WILLY Dilly</td>
-                        <td>89 ILS</td>
-                        <td><img height="120px" class="img-fluid rounded" width="170px" src="../../public/img/women/shirts/shirt3.jpg" alt="Responsive image"></td>
-                        <td><i @click="removeItem(index)" class="far fa-trash-alt iconbtn"></i></td>
-                        </tr>
-
                         <tr v-for="item in items">
                         <th scope="row">{{item.size}}</th>
                         <td>{{item.title}}</td>

@@ -94,18 +94,21 @@
       </div>
    
   
-
+   <br><fot></fot>
   </div>
 </template>
 
 <script>
-
+import footer from './Footer.vue';
 export default {
   data () {
   return {
     publicPath: '/dist'
   }
   },
+  components:{
+            fot:footer
+        }
   
 }
 
