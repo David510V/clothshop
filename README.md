@@ -1,8 +1,17 @@
-# clothshop
+# ClothShop
 
-## Project Desc
+## Project Description
 ```
-My Vue project for an online shopping site.
+Frontend development for a boutique clothing designer online store.
 ```
-Styled with bootstrap. Authentication and database with Firebase
+
+### What we have used? 
+```
+Vue CLI 3, Vue-router, vuex, firebase,Auth with Firebase, axios, webpack, Bootstrap, Jquery, HTML/CSS/JS. 
+```
+
+### Is this online?
+```
+Yep, here is the mock site: http://lameat.s3-website.eu-west-2.amazonaws.com/
+```
 
