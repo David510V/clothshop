@@ -26,7 +26,7 @@
                         </tr>
                     </thead>
                     <tbody> 
-                        <tr v-for="item in items">
+                        <tr v-for="item in items" :key="item">
                         <th scope="row">{{item.size}}</th>
                         <td>{{item.title}}</td>
                         <td>{{item.price}} ILS</td>
