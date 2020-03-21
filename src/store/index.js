@@ -25,9 +25,9 @@ export default new Vuex.Store({
       //state.funds -= stockPrice * quantity;
     },
 
-    'RemoveItem'(state,id){
+    'RemoveItem'(state,removeId){
       const itemsCart=state.itemsCart
-      const itemFound = state.itemsCart.find(item => item.id === id)
+      const itemFound = state.itemsCart.find(item => item.id === removeId)
       itemsCart.splice(itemsCart.indexOf(itemFound),1)
  
       if(state.itemsCart.length==0){
@@ -43,8 +43,8 @@ export default new Vuex.Store({
       commit('BuyItem', order);
     },
 
-    removeItem:({commit},order)=>{
-      commit('RemoveItem',order)
+    removeItem:({commit},removeId)=>{
+      commit('RemoveItem',removeId)
     },
   },
   modules:{

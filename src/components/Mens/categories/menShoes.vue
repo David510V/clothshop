@@ -13,7 +13,7 @@
    <div class="container">
     <div class="row">
        
-       <div class="col-xs-12 col-sm-6" v-for="(item,index) in items">
+       <div class="col-xs-12 col-sm-6" v-for="(item,index) in items" :key="item">
          <div class="card box">
                 <div class="row ">
                   
@@ -26,7 +26,7 @@
                          <h4 class="card-title">{{item.title}}</h4>
                       <br>
                       <h5>Select a Size: </h5> <select v-model="item.size" class="old-select">
-                         <option v-for="option in options">{{option}}</option>
+                         <option v-for="option in options" :key="option">{{option}}</option>
                       </select>
                       <br><br>
                       <p class="card-text">{{item.price}}<img class="shekel" height="13px" src="../../../../public/img/shekel.png"></p>
