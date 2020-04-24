@@ -5,7 +5,7 @@
         <div class="col-sm-4">
 
             <div class="card">
-            <img class="card-img-top" height="423px" width="100px" src="../../../public/img/men/pants.jpg" alt="Card image cap">    
+            <img class="card-img-top p-1" height="423px" width="100px" src="../../../public/img/men/pants.jpg" alt="Card image cap">    
             <div class="card-body">
                 <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menPants" exact>
@@ -20,7 +20,7 @@
         <div class="col-sm-4">
 
             <div class="card">
-            <img class="card-img-top" height="423px" width="100px" src="../../../public/img/men/shirts.jpg" alt="Card image cap">    
+            <img class="card-img-top p-1" height="423px" width="100px" src="../../../public/img/men/shirts.jpg" alt="Card image cap">    
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menShirts" exact>
@@ -34,7 +34,7 @@
         <div class="col-sm-4">
 
             <div class="card">
-            <img class="card-img-top" height="423px" width="100px" src="../../../public/img/men/sweater.jpg" alt="Card image cap">    
+            <img class="card-img-top p-1" height="423px" width="100px" src="../../../public/img/men/sweater.jpg" alt="Card image cap">    
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menSweaters" exact>
@@ -48,8 +48,8 @@
  
         <div class="col-sm-4">
 
-            <div class="card">
-            <img class="card-img-top" height="423px" width="100px" src="../../../public/img/men/shoes.jpg" alt="Card image cap">    
+            <div class="card mt-3">
+            <img class="card-img-top p-1" height="423px" width="100px" src="../../../public/img/men/shoes.jpg" alt="Card image cap">    
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menShoes" exact>
@@ -63,8 +63,8 @@
 
         <div class="col-sm-4">
 
-            <div class="card">
-            <img class="card-img-top" height="423px" width="100px" src="../../../public/img/men/sports.jpg" alt="Card image cap">    
+            <div class="card mt-3">
+            <img class="card-img-top p-1" height="423px" width="100px" src="../../../public/img/men/sports.jpg" alt="Card image cap">    
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menSports"  exact>
@@ -77,8 +77,8 @@
         </div>
         <div class="col-sm-4">
 
-            <div class="card">
-            <img class="card-img-top" height="423px" width="100px" src="../../../public/img/men/accessiores.jpg" alt="Card image cap">    
+            <div class="card mt-3">
+            <img class="card-img-top p-1" height="423px" width="100px" src="../../../public/img/men/accessiores.jpg" alt="Card image cap">    
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/menAccessories" exact>
@@ -91,7 +91,7 @@
         </div><br>
 
           <!-- <div class="card">
-            <img class="card-img-top" height="423px" width="100px" src="../../../public/img/men/accessiores.jpg" alt="Card image cap">    
+            <img class="card-img-top p-1" height="423px" width="100px" src="../../../public/img/men/accessiores.jpg" alt="Card image cap">    
             <div class="card-body">
             <h4 class="display-4" style="text-align:center">
                 <router-link  active-class="active"  to="/men/:id"  exact>

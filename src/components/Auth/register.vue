@@ -24,7 +24,7 @@
             <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label"><h5>Name</h5></label>
                 <div class="col-sm-6">
-                <input type="text" class="form-control" v-model="name" placeholder="Johny Bravo">
+                <input id="name" type="text" class="form-control" v-model="name" placeholder="Johny Bravo">
                 </div>
             </div>
              <div class="form-group row">

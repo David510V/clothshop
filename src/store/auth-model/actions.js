@@ -1,6 +1,7 @@
 import axios from '../../axios-auth.js'
 import router from '../../router'
 import globalAxios from 'axios'
+import 'firebase'//
 require('dotenv').config()
 const api=process.env.VUE_APP_API
 const actions={

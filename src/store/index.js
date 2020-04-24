@@ -10,6 +10,9 @@ export default new Vuex.Store({
     itemsCart:[],
     totalPrice:0,
   },
+  modules:{
+    storeAuth
+  },
   mutations: {
     'BuyItem'(state, {itemId, itemTitle, itemPrice,img,itemSize,itemCatg,itemGender}) {
           state.itemsCart.push({
@@ -47,9 +50,7 @@ export default new Vuex.Store({
       commit('RemoveItem',removeId)
     },
   },
-  modules:{
-    storeAuth
-  },
+  
   getters:{
         itemsCart (state, getters) {
           return state.itemsCart

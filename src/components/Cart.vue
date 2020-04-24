@@ -5,7 +5,7 @@
                 <h3 >ClothMe</h3>
                   </router-link>
       <hr class="hr">
-      <h8>The Simplest Place For You</h8>
+      <h6>The Simplest Place For You</h6>
       <br><br>
        <router-link class="home" active-class="active"  to="/cart" exact>
       <h1 class="men">CART </h1><img class="supericon" height="34px" src="../../public/img/shopping-cart.png">

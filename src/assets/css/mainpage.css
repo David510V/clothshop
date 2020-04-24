@@ -1,5 +1,8 @@
+.card{
+  border: 2px black solid;
+}
 
-   #btn{
+#btn{
     font-size: 35px;
    }
    .btn{

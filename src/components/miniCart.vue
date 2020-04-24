@@ -4,7 +4,7 @@
       <div style="text-align:center">
                 <h3 class="home" >ClothMe</h3>
       <hr class="hr">
-      <h8>The Simplest Place For You</h8>
+      <h6>The Simplest Place For You</h6>
       <br><br>
       <h1 class="home men">CART </h1><img class="supericon" height="34px" src="../../public/img/shopping-cart.png">
      </div>
