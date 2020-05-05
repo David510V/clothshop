@@ -3,16 +3,24 @@ import Vuex from "vuex";
 import { expect } from 'chai';
 // import { render } from '@vue/server-test-utils'
 import Home1 from '../../src/App.vue'
-import Register from '../../src/components/Auth/register.vue'
-import {shallowMount } from "@vue/test-utils";
+import menPants from '../../src/components/Mens/categories/menPants.vue'
+import {shallowMount,createLocalVue, mount } from "@vue/test-utils";
 import sinon from 'sinon'
+// import router from '../../src/router/index'
 import sinonChai from 'sinon-chai'
 import spies from 'chai-spies';
 import Vue from 'vue'
+
+import VueRouter from 'vue-router'
+const localVue = createLocalVue()
+
 Vue.use(Vuex)
 chai.use(spies);
 chai.use(sinonChai);
 
+localVue.use(Vuex)
+localVue.use(VueRouter)
+const router = new VueRouter()
 // describe('Home1', () => {
 //   beforeEach(() => {
 //     component = shallowMount(Home1);
@@ -44,34 +52,41 @@ describe('Basic component', () => {
   })
 })
 
-// const localVue = createLocalVue();
-// var component = shallowMount(Home1);
-
-
-
 describe(" Store Auth Testing", () => {
-      let store;
-      
-      beforeEach(() => {
-      const storeAuth = {
-      state: {}, 
-        actions:{
-          register: sinon.stub(),
-          storeUser: sinon.stub()
-        }
-      }
-      
-        store = new Vuex.Store({
-          modules: {
-            storeAuth: storeAuth
-          }
-        })
-       })
+  let actions
+  let store
 
-      it("User NameExist", async () => {
-        const wrapper = shallowMount(Register);
-        wrapper.find("#sign-up").trigger("click")
-        await wrapper.vm.$nextTick()
-        expect(storeAuth.actions.register).toHaveBeenCalled()
+      beforeEach(() => {
+        // wrapper = mount(menPants, { store, localVue, router })
+        actions = {
+          buyItem: sinon.stub()
+        }
+        store = new Vuex.Store({
+          actions
+        })
+      })
+      // beforeEach(() => {
+      // const storeAuth = {
+      // state: {}, 
+      //   actions:{
+      //     register: sinon.stub(),
+      //     storeUser: sinon.stub()
+      //   }
+      // }
+      
+      //   store = new Vuex.Store({
+      //     modules: {
+      //       storeAuth: storeAuth
+      //     }
+      //   })
+      //  })
+     
+      it("Test Cart", () => {
+      let  wrapper = shallowMount(menPants, { store, localVue}) //, router
+      // let wrapper=mount(menPants , { store, localVue , router})
+      
+      const TestComponent = {template: '<button id="#addCart"></button>'}
+        wrapper=mount(TestComponent) 
+        expect(wrapper.find(TestComponent).exists()).to.equal(true)
       });
 })

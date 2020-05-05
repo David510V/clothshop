@@ -30,7 +30,7 @@
                       </select>
                       <br><br>
                       <p class="card-text">{{item.price}}<img class="shekel" height="13px" src="../../../../public/img/shekel.png"></p>
-                       <button  class="btn" @click="buyItem(index)" data-target="#miniCart">Add to cart {{item.title}}</button>
+                       <button id="addCart"  class="btn" @click="buyItem(index)" data-target="#miniCart">Add to cart {{item.title}}</button>
                       
                       </div>
                     </div>
@@ -54,23 +54,23 @@
 <script>
 // @ is an alias to /src
 // <img :src="require(`../../../../public/img/men/pants/${item.img}.jpg`)" alt="">
-import db from '../../../firebase.js'
+// import db from '../../../firebase.js'
 import modelCart from '../../modal/modelCart.vue'
 import modelIMG from '../../modal/modelIMG.vue'
 let items=[];
-db.collection('/men-pants').get()
-  .then(querySnapshot =>{
-    querySnapshot.forEach(doc=>{
-      console.log(doc.data())
-      const data={
-        id:doc.id,
-        title:doc.data().title,
-        price:doc.data().price,
-        img:doc.data().img
-      }
-      items.push(data)
-    })
-  });
+// db.collection('/men-pants').get()
+//   .then(querySnapshot =>{
+//     querySnapshot.forEach(doc=>{
+//       console.log(doc.data())
+//       const data={
+//         id:doc.id,
+//         title:doc.data().title,
+//         price:doc.data().price,
+//         img:doc.data().img
+//       }
+//       items.push(data)
+//     })
+//   });
   
 
 export default {
