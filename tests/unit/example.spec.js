@@ -4,7 +4,7 @@ import { expect } from 'chai';
 // import { render } from '@vue/server-test-utils'
 import Home1 from '../../src/App.vue'
 import menPants from '../../src/components/Mens/categories/menPants.vue'
-import {shallowMount,createLocalVue, mount } from "@vue/test-utils";
+import {shallowMount,createLocalVue,  shallow } from "@vue/test-utils";
 import sinon from 'sinon'
 // import router from '../../src/router/index'
 import sinonChai from 'sinon-chai'
@@ -21,6 +21,7 @@ chai.use(sinonChai);
 localVue.use(Vuex)
 localVue.use(VueRouter)
 const router = new VueRouter()
+const assert=chai.assert
 // describe('Home1', () => {
 //   beforeEach(() => {
 //     component = shallowMount(Home1);
@@ -55,11 +56,11 @@ describe('Basic component', () => {
 describe(" Store Auth Testing", () => {
   let actions
   let store
-
+  // let wrapper = shallow(menPants, { store, localVue}) //, router
       beforeEach(() => {
         // wrapper = mount(menPants, { store, localVue, router })
         actions = {
-          buyItem: sinon.stub()
+          SOME_ACTION: sinon.stub()
         }
         store = new Vuex.Store({
           actions
@@ -82,11 +83,36 @@ describe(" Store Auth Testing", () => {
       //  })
      
       it("Test Cart", () => {
-      let  wrapper = shallowMount(menPants, { store, localVue}) //, router
       // let wrapper=mount(menPants , { store, localVue , router})
+      var buyItem=sinon.stub(menPants.methods,'buyItem') 
+       shallow(menPants, { store, localVue})
+      // expect(buyItem).to.be.calledWith(1)
+      // wrapper.find({ ref: 'addcart' })
+      // var button = wrapper.find({ ref: 'addcart' })
+      // button.trigger('click')
+      // buyItem.trigger('click')
       
-      const TestComponent = {template: '<button id="#addCart"></button>'}
-        wrapper=mount(TestComponent) 
-        expect(wrapper.find(TestComponent).exists()).to.equal(true)
+      // var addCart = { method: function (some) {
+      //   if(some===Number){
+      //     this.$store.dispatch('buyItem', order);
+      //   }
+       
+      // } };
+      // var order={
+      //   name:'1',
+      //   size:'3',
+      // }
+      // const vm=wrapper
+      // function addCart(){
+      //   vm.$store.dispatch('buyItem',order)
+      // }
+
+      // addCart()
+
+      
+      // var mock = sinon.mock(addCart);
+      // mock.calledWith(1)
+      // mock.expects("method").once().throws(); // working! 
+      expect(actions.SOME_ACTION).to.have.been.called.once
       });
 })

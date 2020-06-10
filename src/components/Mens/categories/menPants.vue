@@ -30,7 +30,7 @@
                       </select>
                       <br><br>
                       <p class="card-text">{{item.price}}<img class="shekel" height="13px" src="../../../../public/img/shekel.png"></p>
-                       <button id="addCart"  class="btn" @click="buyItem(index)" data-target="#miniCart">Add to cart {{item.title}}</button>
+                       <button ref="addcart" id="addCart"  class="btn" @click="buyItem(index)" data-target="#miniCart">Add to cart {{item.title}}</button>
                       
                       </div>
                     </div>
@@ -88,7 +88,9 @@ export default {
       options:['S','M','L','XL']
     }
   },
-
+  created(){
+    this.$store.dispatch('SOME_ACTION');
+  },
   methods: {
     buyItem(index){
       if(!this.items[index].size){
@@ -105,6 +107,7 @@ export default {
         }
         
        $('#miniCart').modal('show')
+       
          this.$store.dispatch('buyItem', order);
          console.log(order)
       }
