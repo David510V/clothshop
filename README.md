@@ -12,6 +12,6 @@ Vue CLI 3, Vue-router, vuex, firebase,Auth with Firebase, axios, webpack, Bootst
 
 ### Is this online?
 ```
-Yep, here is the mock site: http://lameat.s3-website.eu-west-2.amazonaws.com/
+Yep, here is the mock site: http://clothme.s3-website.us-east-2.amazonaws.com
 ```
 
